@@ -1,4 +1,24 @@
 from flask import Flask, render_template
+
+# Create a Flask application instance
+app = Flask(__name__)
+
+# Define a route for the homepage
+@app.route("/")
+def home():
+    return "<h1>Welcome to My Flask App</h1><p>This is the homepage.</p>"
+
+# Define a route for an "About" page
+@app.route("/about")
+def about():
+    return "<h1>About Page</h1><p>This is a simple Flask app example.</p>"
+
+# Run the app in debug mode (development only)
+if __name__ == "__main__":
+    app.run(debug=True)
+
+'''
+from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
@@ -44,3 +64,4 @@ def register():
 
 if __name__ == '__main__':
     app.run(debug=True)
+'''
