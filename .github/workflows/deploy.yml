@@ -1,4 +1,4 @@
-name: Deploy Flask App
+name: CI for Flask App
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  deploy:
+  test:
     runs-on: ubuntu-latest
 
     steps:
@@ -23,6 +23,5 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Deploy to Server
-        run: |
-          # Your deployment commands (e.g., SSH to your server, upload files, restart service)
+      - name: Run tests
+        run: pytest
