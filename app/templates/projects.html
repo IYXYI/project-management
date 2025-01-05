@@ -1,14 +1,14 @@
-{% extends "base.html" %}
+<!-- projects.html -->
 
-{% block title %}Projects{% endblock %}
-
-{% block content %}
-<h1>Projects</h1>
-<ul>
-    {% for project in projects %}
-    <li>
-        <strong>{{ project.name }}</strong> - {{ project.status }}
-    </li>
-    {% endfor %}
-</ul>
-{% endblock %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Projects</title>
+    <link rel="stylesheet" href="static/css/style.css" />
+  </head>
+  <body>
+    <h1>Projects</h1>
+    <div id="projects-list"></div>
+    <script src="static/js/script.js"></script>
+  </body>
+</html>
